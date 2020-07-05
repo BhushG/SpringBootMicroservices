@@ -17,7 +17,7 @@ public class BasicSpringTest {
         // when we want to get reference to object present in Spring Container we call context.getBean(OBJECT_ID)
         // if we want to create new object for each getBean call, we should define the scope as prototype
        // Opposite to singleton, prototype scope produces a new instance each and every time a bean is requested.
-        Shape shape = (Shape) context.getBean("circle");
+        Shape shape = context.getBean("triangle", Shape.class);
 
         shape.draw();
 
