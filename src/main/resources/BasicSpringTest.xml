@@ -5,9 +5,9 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- bean definitions here -->
-    <bean id="triangle" class = "com.test.basicspring.shape.Triangle" autowire="byName" scope="singleton">
-        <property name="type" value="Equilateral"/>
-        <property name="sideLengths">
+    <bean id="triangle" class = "com.test.spring.core.shape.Triangle" autowire="byName" scope="singleton">
+        <property name="type" value="Equilateral"/> <!-- property uses setter method to set the property -->
+        <property name="sideLengths"> <!-- if the setter method is not present in the object, then it will throw exception -->
             <list>
                 <value>1</value>
                 <value>2</value>
@@ -16,22 +16,22 @@
         </property>
     </bean>
 
-    <bean id="circle" class="com.test.basicspring.shape.Circle" scope="prototype">
+    <bean id="circle" class="com.test.spring.core.shape.Circle" scope="prototype">
         <property name="center" ref="pointA"/>
         <property name="radius" value="5.0"/>
     </bean>
 
-    <bean id="pointA" class="com.test.basicspring.shape.Point">
+    <bean id="pointA" class="com.test.spring.core.shape.Point">
         <property name="x" value="1.0"/>
         <property name="y" value="1.0"/>
     </bean>
 
-    <bean id="pointB" class="com.test.basicspring.shape.Point">
+    <bean id="pointB" class="com.test.spring.core.shape.Point">
         <property name="x" value="2"/>
         <property name="y" value="2"/>
     </bean>
 
-    <bean id="pointC" class="com.test.basicspring.shape.Point">
+    <bean id="pointC" class="com.test.spring.core.shape.Point">
         <property name="x" value="3"/>
         <property name="y" value="3"/>
     </bean>

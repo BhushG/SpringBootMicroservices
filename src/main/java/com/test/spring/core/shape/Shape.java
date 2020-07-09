@@ -1,4 +1,4 @@
-package com.test.basicspring.shape;
+package com.test.spring.core.shape;
 
 public abstract class Shape {
     public void draw() {
