@@ -12,9 +12,9 @@ public class BasicSpringTest {
     public static void main(String[] args) {
         // when we initialize ApplicationContext, Spring will initialize all the Bean objects at a time and
         // it will add those objects in Spring Container
-        // all those Bean objects that we want to initialize are in BasicSpringTest.xml here
+        // all those Bean objects that we want to initialize are in CoreSpringTest.xml here
         // all these initialized objects will be initialized only once and added in Spring Container
-        AbstractApplicationContext context = new ClassPathXmlApplicationContext("BasicSpringTest.xml");
+        AbstractApplicationContext context = new ClassPathXmlApplicationContext("CoreSpringTest.xml");
 
         // destroy method will be called for beans after ApplicationContext shutdown
         context.registerShutdownHook();
