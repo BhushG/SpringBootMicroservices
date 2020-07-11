@@ -9,6 +9,7 @@
     <context:annotation-config/>
 
     <bean id="human" class="com.test.spring.annotation.autowired.Human">
+        <!--heart property in set in code autowired-->
     </bean>
 
     <bean id="heart1" class="com.test.spring.annotation.autowired.Heart"/>
