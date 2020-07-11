@@ -2,7 +2,6 @@ package com.test.spring.annotation.value;
 
 import lombok.Data;
 import lombok.ToString;
-import org.springframework.beans.factory.annotation.Required;
 import org.springframework.beans.factory.annotation.Value;
 
 @Data
