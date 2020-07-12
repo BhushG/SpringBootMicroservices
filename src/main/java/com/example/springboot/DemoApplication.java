@@ -21,6 +21,7 @@ public class DemoApplication {
 		// This static run method does following things -> set default config, start spring ApplicationContext, perform
 		// classpath scan and start TomCat server.
 		// check pom.xml for dependencies
+		// spring-boot-starter-web this dependency adds tomcat in our SpringBoot application
 		ApplicationContext context = SpringApplication.run(DemoApplication.class, args);
 		// SpringBoot by default is configured to use application.properties in resources for properties.
 	}
