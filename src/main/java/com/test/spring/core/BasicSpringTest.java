@@ -10,6 +10,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class BasicSpringTest {
     public static void main(String[] args) {
+        // Spring framework lets you build enterprise java applications
         // when we initialize ApplicationContext, Spring will initialize all the Bean objects at a time and
         // it will add those objects in Spring Container
         // all those Bean objects that we want to initialize are in CoreSpringTest.xml here
