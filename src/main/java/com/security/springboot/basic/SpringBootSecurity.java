@@ -1,4 +1,4 @@
-package com.security.springboot;
+package com.security.springboot.basic;
 
 
 import org.springframework.boot.SpringApplication;
@@ -13,6 +13,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *  spring.security.user.name: bhush
  *  spring.security.user.password: pass
  *
+ * Default Behaviour:
+ *  adds mandatory authentication for URLs
+ *  adds login form
+ *  handles login error
  */
 
 @SpringBootApplication
