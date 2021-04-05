@@ -47,11 +47,19 @@ public class SecurityConfigurer extends WebSecurityConfigurerAdapter
         // all the rest of the requests should be authenticated
         //we want all the requests to be stateless, by default authentication is stateful,
         // state will be maintained by JWT
+
         httpSecurity.csrf().disable()
-            .authorizeRequests().antMatchers("/authenticate").permitAll().
-            anyRequest().authenticated().and().
-            exceptionHandling().and().sessionManagement()
-            .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+            .authorizeRequests()
+            .antMatchers("/authenticate*")
+            .permitAll()
+            .and()
+            .authorizeRequests()
+            .anyRequest()
+            .authenticated()
+            .and()
+                .exceptionHandling().and().sessionManagement()
+                .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+
         httpSecurity.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
 
     }
